@@ -1,0 +1,21 @@
+.app-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-top {
+  display: flex;
+  margin-bottom: 13px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  &--form {
+    margin-bottom: 28px;
+  }
+}
