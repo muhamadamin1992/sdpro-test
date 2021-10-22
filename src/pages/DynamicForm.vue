@@ -125,7 +125,6 @@ export default defineComponent({
         name.value = '';
         pageTitle.value = `New ${props.title}`;
         optionSelected.value = undefined;
-        return;
       }
       if (lastPage.value?.api === props.api) {
         optionSelected.value = lastPage.value.value;
