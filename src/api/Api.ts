@@ -1,9 +1,7 @@
 import { Request, Response } from 'src/shared/models';
 
-class API {
-  constructor(private baseUrl: string) {
-    this.baseUrl = baseUrl;
-  }
+const API = {
+  baseUrl: 'https://vacancy.sdpro.uz/api/',
 
   async request({ url, method, body }: Request): Promise<Response> {
     try {
@@ -19,13 +17,11 @@ class API {
     } catch (error) {
       return { error } as Extract<Response, 'error'>;
     }
-  }
+  },
 
   get({ url, body }: Omit<Request, 'method'>): Promise<Response> {
     return this.request({ url, method: 'GET', body });
-  }
-}
+  },
+};
 
-const api = new API('https://vacancy.sdpro.uz/api/');
-
-export default api;
+export default API;
